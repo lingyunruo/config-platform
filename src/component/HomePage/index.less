@@ -1,0 +1,44 @@
+
+
+body {
+    * {
+        box-sizing: border-box;
+        transition: all .3s;
+    }
+}
+
+.platform-page {
+
+    .platform-header {
+        height: 80px;
+        padding: 20px;
+        border: 1px solid #ccc;
+    }
+
+    .project-card-list {
+        padding: 20px;
+        &:after {
+            content: ' ';
+            display: block;
+            width: 0;
+            height: 0;
+            clear: both;
+        }
+        .project-card {
+            width: 200px;
+            height: 150px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 10px;
+            font-size: 16px;
+            float: left;
+            margin: 0 10px 10px 0;
+            cursor: pointer;
+
+            &:hover {
+                border-color: #40a9ff;
+                color: #40a9ff;
+            }
+        }
+    }
+}
