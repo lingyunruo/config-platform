@@ -6,14 +6,16 @@ export default {
     data: {
         createProjectModalVisible: false,
         projectName: '',
-        currentPage: 'create-project', // 当前页面 create-project
+        currentPage: 'create-project', // 当前页面 create-project project-edit-page
         libraryList: [], // 组件库列表
-        createProjectFormValue: {
+        createProjectFormValue: {// 创建项目时表单的编辑值
             projectName: '',
             library: '',
             needRouter: 'no',
         },
-        projects: []
+        projects: [], // 已有项目列表
+        componentsList: [], // 当前可用组件列表
+
     },
     sync: {
         update: (state, payload) => {

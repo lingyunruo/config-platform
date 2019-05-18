@@ -23172,23 +23172,26 @@ body * {
   float: left;
   margin: 0 10px 10px 0;
   cursor: pointer;
+  background: #fff;
 }
 .platform-page .project-card-list .project-card:hover {
   border-color: #40a9ff;
   color: #40a9ff;
 }
 
-.create-project-page {
-  padding: 20px;
-}
-.create-project-page .input-item-line {
+
+.input-item-line {
   display: inline-block;
   padding: 10px;
-  margin-right: 20px;
+  margin: 10px;
 }
-.create-project-page .input-item-line span {
+.input-item-line span {
   display: inline-block;
   width: 200px;
   margin-left: 10px;
+}
+
+.create-project-page {
+  padding: 20px;
 }
 

@@ -2,10 +2,8 @@
 
 
 
-module.exports = () => {
+module.exports = (config) => {
     
-    const config = require('../config');
-
     return Object.keys(config.library);
 
 }

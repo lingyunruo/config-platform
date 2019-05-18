@@ -2,7 +2,9 @@
 module.exports = `
 
 module.exports = {
-    projectName: <%= projectName %>
+    projectName: "<%= projectName %>",
+    pagePath: "<%= pagePath %>",
+    library: "<%= library %>"
 };
 
 `;

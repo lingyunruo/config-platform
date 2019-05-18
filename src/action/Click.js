@@ -15,8 +15,7 @@ export default class Click {
         dispatch({
             type: 'cp/update',
             payload: {
-                currentPage: 'create-project',
-                libraryList: res.libraryList
+                currentPage: 'create-project'
             }
         });
     }

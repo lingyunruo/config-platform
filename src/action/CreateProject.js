@@ -9,6 +9,7 @@ export default class CreateProject {
 
     extend = [FetchAction]
 
+    // 修改创建项目的表单
     changeCreateProjectFormValue = (field) => {
         return (e) => {
             const {props} = this.comp;

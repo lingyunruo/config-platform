@@ -1,7 +1,6 @@
-
-    module.exports = [
+module.exports = [
 	{
-		"projectName": "test-project"
+		"projectName": "ttt",
+		"configPath": "ttt/config.js"
 	}
 ]
-    

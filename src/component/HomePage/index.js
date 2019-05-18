@@ -6,9 +6,11 @@ import "antd/dist/antd.css";
 import './index.less';
 
 import ClickAction from '../../action/Click';
-import CreateProjectPage from '../CreateProjectPage';
 import MainAction from '../../action/Main';
+import ProjectEditAction from '../../action/ProjectCard';
 
+import ProjectEditPage from '../ProjectEditPage';
+import CreateProjectPage from '../CreateProjectPage';
 import Layout from 'antd/lib/layout';
 
 const {Header, Content} = Layout;
@@ -16,7 +18,8 @@ const {Header, Content} = Layout;
 const HomePage = render({
     actions: {
         click: ClickAction,
-        main: MainAction
+        main: MainAction,
+        proE: ProjectEditAction
     }
 })(({props, action, state}) => {
 
@@ -35,20 +38,36 @@ const HomePage = render({
                 <Content>
                     {
                         cp.currentPage === 'create-project' && 
-                        <CreateProjectPage />
+                        [
+                            <CreateProjectPage 
+                                key={0}
+                            />,
+                            <div 
+                                className="project-card-list"
+                                key={1}
+                            >
+                                {cp.projects.map((item, index) => {
+                                    return (
+                                        <div 
+                                            className="project-card"
+                                            key={index}
+                                            onClick={action.proE.openProjectPage(item)}
+                                        >
+                                            {item.projectName}
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        ]
                     }
-                    <div className="project-card-list">
-                        {cp.projects.map((item, index) => {
-                            return (
-                                <div 
-                                    className="project-card"
-                                    key={index}
-                                >
-                                    {item.projectName}
-                                </div>
-                            );
-                        })}
-                    </div>
+                    {
+                        cp.currentPage === 'project-edit-page' &&
+                        [
+                            <ProjectEditPage 
+                                key={0}
+                            />
+                        ]
+                    }
                 </Content>
             </Layout>
         </div>
