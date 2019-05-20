@@ -23179,6 +23179,9 @@ body * {
   color: #40a9ff;
 }
 
+.project-card-page .project-card-header {
+  width: auto;
+}
 
 .input-item-line {
   display: inline-block;
